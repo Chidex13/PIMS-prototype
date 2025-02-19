@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/all.css">
+    <link rel="Icon" href="../detc-removebg-preview.png">
+    <title>Document</title>
+
+    <style>
+      *{
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(38, 38, 68);
+            margin: 0;
+            padding: 0;
+        }
+
+        nav #logo{
+            color: white;
+            font-size: 22px;
+            margin: 0 0 0 18px;
+        }
+
+        nav #logo i{
+            margin-right: 3px;
+            font-size: 16px;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+        }
+
+        #nav_links {
+            padding: 1px;
+            width: 38%;
+            margin-right: 2%;
+        }
+
+        nav #nav_links #laptopview{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        #nav_links #laptopview a{
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+            padding: 4px;
+            width: fit-content;
+            height: fit-content;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #nav_links #laptopview #usr{
+            border: 1px solid rgb(255, 255, 255);
+            color: rgb(55, 55, 110);
+            padding: 6px 8px;
+            border-radius: 100%;
+        }
+
+        #nav_links #laptopview #usr:hover{
+            border-color: rgba(241, 241, 241, 0.815)
+        }
+
+        #nav_links #laptopview a:hover{
+            color: rgba(241, 241, 241, 0.815);
+        }
+
+        #nav_links #laptopview a hr{
+            color: inherit;
+            width: 6px;
+            display: flexbox;
+            justify-self: center;
+        }
+
+        #nav_links #laptopview button{
+            padding: 10px 14px;
+            border: none;
+            background-color: rgb(46, 46, 97);
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.295);
+        }
+
+        #nav_links #laptopview button:hover{
+            background-color: rgba(46, 46, 97, 0.747);
+            
+        }
+
+        #nav_links #mobileview{
+            display: none;
+            padding: 2px;
+            color: white;
+        }
+
+        #nav_links #mobileview i{
+            font-size: 18px;
+        }
+
+        #nav_links #mobileview #dropdown{
+            position: absolute;
+            right: 2%;
+            display: none;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+
+        .display{
+            display: flex !important;
+            flex-direction: column;
+        }
+
+        #nav_links #mobileview #dropdown a{
+            text-decoration: none;
+            color: white;
+            padding: 12px 58px;
+            font-size: 16px;
+            background-color: rgb(43, 43, 87);
+        }
+
+        #nav_links #mobileview #dropdown a i{
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        #nav_links #mobileview #dropdown a:last-child i{
+            color: red;
+        }
+
+        #nav_links #mobileview #dropdown a:first-child{
+            border-radius: 6px 6px 0 0 ;
+        }
+
+        #nav_links #mobileview #dropdown a:last-child{
+            border-radius: 0 0 6px 6px ;
+        }
+
+        #nav_links #mobileview #dropdown a:nth-child(1), #nav_links #mobileview #dropdown a:nth-child(2), #nav_links #mobileview #dropdown a:nth-child(3),  #nav_links #mobileview #dropdown a:nth-child(4){
+            border-bottom: 1px solid rgba(255, 255, 255, 0.253);
+        }
+
+        @media screen and (max-width :950px){
+            nav #nav_links{
+                width: fit-content;
+            }
+
+            nav #nav_links #laptopview{
+                display: none;
+            }
+
+            nav #nav_links #mobileview{
+                display: block;
+            }
+
+        }
+
+        main{
+            display: flexbox;
+            justify-self: center;
+            width: 90%;
+            margin: 5px 0 0 0 ;
+        }
+
+        main #usr{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main #usr_img{
+            padding: 10px;
+            color: rgb(47, 47, 94);
+            font-size: 95px;
+        }
+
+        #det_container{
+            display: flexbox;
+            justify-self: center;
+            padding: 20px;
+            width: 94%;
+            height: fit-content;
+        }
+
+        main #details{
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            height: fit-content;
+            padding: 10px;
+        }
+
+        main #details hr{
+            border: 1px solid rgba(255, 255, 255, 0.301);
+        }
+
+        main #usr{
+            margin: 0 0 18px 0;
+        }
+
+        main #usr_name{
+            display: flexbox;
+            justify-self: center;
+            margin: 8px 0 0 0;
+            color: white;
+            font-size: 20px;
+        }
+
+        main #details #info_sect1,
+        main #details #info_sect2{
+            padding: 10px;
+            height: fit-content;
+            width: 38%;
+        }
+
+        main #details #info_sect1 span,
+        main #details #info_sect2 span{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width: 890px) {
+            main{
+                width: 96%;
+            }
+
+            main #usr{
+                
+                margin: 0 0 3px 0;
+            }
+
+            main #details{
+                width: 100%;
+                display: block;
+                padding: 4px;
+            }
+
+            main #details #info_sect1, main #details #info_sect2{
+                width: 96%;
+            }
+
+
+            main #details hr{
+                width: 30%;
+                display: flexbox;
+                justify-self: center;
+                margin: 18px 0;
+                align-self: center;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <p id="logo"> <i class="fa-solid fa-user-secret"></i>BUPD</p>
+        <div id="nav_links">
+            <div id="laptopview">
+                <a href="home_pg.html">Home </a>
+                <a href="case_logs.html">Cases</a>
+                <a href="new_case.html"> Case</a>
+                <a id="usr" href="user_det.html"><i class="fa-solid fa-user"></i></a>
+                <a href="user_log.html"><button>Logout</button></a>
+            </div>
+
+            <div id="mobileview">
+                <div id="menubtn"><i class="fas fa-bars"></i></div>
+                <div id="dropdown">
+                    <a href="home_pg.html"><i class="fas fa-home"></i>Home</a>
+                    <a href="case_logs.html"><i class="fas fa-briefcase"></i>Cases</a>
+                    <a href="new_case.html"><i class="fa-solid fa-folder-plus"></i> Case</a>
+                    <a id="usr" href="user_det.html"><i class="fas fa-user"></i>Profile</a>
+                    <a href="user_log.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="usr">
+            <div id="usr_img"><i class="fa-solid fa-user"> </i></div>
+
+            <div id="usr_name">Davies Chidera</div>
+        </div>
+
+        <div id="det_container">
+            <div id="details">
+
+                <div id="info_sect1">
+                    <span><b>Dob: </b></span><br>
+                    <span><b>Gender: </b> Male</span> <br>
+                    <span><b>Phone.no: </b> 08060787943</span><br>
+                    <span><b>Email: </b>example@gmail.com</span>
+                </div>
+
+                <hr>
+
+                <div id="info_sect2">
+                    <span><b>Rank:</b>Investigator</span><br>
+                    <span><b>Division:</b></span><br>
+                    <span><b>Start date:</b></span> <br>
+                    <span><b>No. of cases:</b></span>
+
+                </div>
+                
+            </div>
+        </div>
+
+
+    </main>
+    
+            
+    <script>
+        let menubtn = document.querySelector("#mobileview  #menubtn");
+        let dropdown = document.getElementById("dropdown")
+
+        menubtn.addEventListener("click", function(){
+            dropdown.classList.toggle("display");
+            event.stopPropagation();
+        });
+
+        document.addEventListener("click", function(){
+            dropdown.classList.remove("display")
+        });
+    </script>     
+            
+</body>
+</html>
